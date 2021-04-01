@@ -3,7 +3,7 @@ configure do
   if Sinatra::Application.development?
     ActiveRecord::Base.logger = Logger.new(STDOUT)
     set :database, {
-        adapter: "sqlite3"
+        adapter: "sqlite3",
         database: "db/db.sqlite3"
     }
 else
